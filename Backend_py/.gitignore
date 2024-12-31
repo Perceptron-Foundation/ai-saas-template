@@ -1,3 +1,22 @@
+# Virtual environment folder
 venv/
+
+# Environment variable file
 .env
 
+# Python bytecode files
+__pycache__/
+
+# Python distribution artifacts
+*.egg
+*.egg-info
+dist/
+build/
+
+# IDE or editor settings
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db

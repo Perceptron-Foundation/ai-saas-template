@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr
-
+from uuid import UUID
 # pydantic models for validation
 class UserBase(BaseModel):
     email: EmailStr
@@ -20,7 +20,7 @@ class UserRegister(BaseModel):
     full_name: str|None = None  
 
 class User(UserBase):
-    id: int
+    id: UUID
     class Config:
         orm_mode = True 
 
