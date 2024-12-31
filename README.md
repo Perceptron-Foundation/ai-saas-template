@@ -1,9 +1,9 @@
 # ai-saas-template
 ## Backend: 
-** Python: FastApi, PostgreSQL
+- Python: FastApi, PostgreSQL
 
 ## Frontend:
-** React, Tailwind
+- React, Tailwind
 
 ## Docker(Development and Production)
 
