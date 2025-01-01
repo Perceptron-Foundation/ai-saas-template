@@ -21,7 +21,7 @@ def signup(user: validation_schema.UserCreate, db: Session = Depends(get_db)):
     return crud.create_user(db=db, user=user)
 
 
-@router.post("/signin", response_model=validation_schema.User)
+@router.post("/signin", response_model=validation_schema.Token)
 def signin(user: validation_schema.UserRegister, response: Response, db: Session = Depends(get_db)):
     db_user = crud.get_user_by_email(db, email = user.email)
     if not db_user:
@@ -33,4 +33,4 @@ def signin(user: validation_schema.UserRegister, response: Response, db: Session
     access_token = create_access_token(db_user.email, expires_delta=access_token_expire)
 
     response.set_cookie(key="access_token", value=f"Bearer {access_token}", httponly=True, secure=True)
-    return {"access_token": access_token, "token_type": "bearer"}
+    return validation_schema.Token(access_token=access_token)

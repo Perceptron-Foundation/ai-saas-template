@@ -22,7 +22,9 @@ class UserRegister(BaseModel):
 class User(UserBase):
     id: UUID
     class Config:
-        orm_mode = True 
+        orm_mode = True    
 
-
-        
+class Token(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
+    

@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+datetime
+PyJWT
+passlib
+pydantic-settings
+sqlalchemy
+psycopg2
+python-dotenv
+pydantic
+pydantic[email]
+bcrypt

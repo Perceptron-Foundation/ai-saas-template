@@ -1,10 +1,10 @@
 from datetime import datetime, timedelta, timezone
 from typing import Any
-
-from core.config import settings
-
 import jwt
 from passlib.context import CryptContext
+
+
+from Backend_py.core.config import settings
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated= "auto")
 ALGORITHM = "HS256"
